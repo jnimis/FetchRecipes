@@ -21,6 +21,8 @@ class RecipeDetailViewController: UIViewController {
     super.viewDidLoad()
     tableView.dataSource = self
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: "IngredientCell")
+    
+    // show loading overlay
     if !HTTPUtil.shared().fetchMeal(mealId: recipeId ?? "", completion: { recipe, errorMessage in
       if let data = recipe {
         self.formatForRecipe(data)
@@ -38,6 +40,7 @@ class RecipeDetailViewController: UIViewController {
       self.titleLabel.text = data.strMeal
       self.descriptionLabel.text = data.strInstructions
       self.tableView.reloadData()
+      // dismiss loading overlay and show error
     }
   }
   
@@ -46,6 +49,7 @@ class RecipeDetailViewController: UIViewController {
       self.titleLabel.text = "Oops!"
       self.descriptionLabel.text = "There was an error, please try again!"
       print("ERROR: \(error)")
+      // dismiss loading overlay and show error
     }
   }
 

@@ -21,16 +21,22 @@ class RecipeListViewController: UIViewController {
     tableView.dataSource = self
     tableView.delegate = self
     
+    // show loading overlay
+    
     if !HTTPUtil.shared().fetchDesserts(completion: { meals, errorMessage in
       if let result = meals {
         self.recipeList = result
         DispatchQueue.main.async {
           self.tableView.reloadData()
+          // dismiss loading overlay
         }
       } else if let e = errorMessage {
+        
+        // dismiss loading overlay and show error (on main queue)
         print("show the user a generic message, but we know that the error is \(e)")
       }
     }) {
+      // dismiss loading overlay and show error
       print("CODING ERROR: the request was never sent")
     }
   }
