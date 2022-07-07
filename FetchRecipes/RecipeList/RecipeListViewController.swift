@@ -65,12 +65,11 @@ extension RecipeListViewController : UITableViewDataSource {
     if let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell") as? RecipeListTableViewCell, recipeList.count > 0 {
       
       let meal = recipeList[indexPath.row]
-      cell.label.text = meal.strMeal
+      cell.format(for: meal)
       
       return cell
       
     } else {
-      // this could be a "no results yet" cell
       return UITableViewCell()
     }
   }

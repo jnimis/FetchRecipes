@@ -6,21 +6,16 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RecipeListTableViewCell: UITableViewCell {
   
   @IBOutlet var thumbView : UIImageView!
   @IBOutlet var label : UILabel!
 
-  override func awakeFromNib() {
-    super.awakeFromNib()
-      // Initialization code
-  }
-
-  override func setSelected(_ selected: Bool, animated: Bool) {
-    super.setSelected(selected, animated: animated)
-
-      // Configure the view for the selected state
+  public func format(for item: MealItem) {
+    label.text = item.strMeal
+    thumbView.kf.setImage(with: URL(string: item.strMealThumb))
   }
     
 }
