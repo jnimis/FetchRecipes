@@ -9,15 +9,15 @@ import UIKit
 
 class RecipeListViewController: UIViewController {
 
-  @IBOutlet var tableView : UITableView!
-  
+  var tableView = UITableView(frame: .zero)
   var recipeList : [MealItem] = []
-  var selectedId : String?
   
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    tableView.register(UINib(nibName: "RecipeListTableViewCell", bundle: nil), forCellReuseIdentifier: "ListCell")
+    tableView.translatesAutoresizingMaskIntoConstraints = false
+    ConstraintUtil.placeView(tableView, inside: self.view)
+    tableView.register(RecipeListTableViewCell.self, forCellReuseIdentifier: "ListCell")
     tableView.dataSource = self
     tableView.delegate = self
     
@@ -40,25 +40,16 @@ class RecipeListViewController: UIViewController {
       print("CODING ERROR: the request was never sent")
     }
   }
-  
-  @IBAction func unwind(_ segue: UIStoryboardSegue) {
-    
-  }
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "showDetail" {
-      let detailView = segue.destination as? RecipeDetailViewController
-      detailView?.recipeId = selectedId
-    }
-  }
-  
 }
 
 extension RecipeListViewController : UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
     let meal = recipeList[indexPath.row]
-    selectedId = meal.idMeal
-    performSegue(withIdentifier: "showDetail", sender: self)
+    let detailVc = RecipeDetailViewController()
+    detailVc.recipeId = meal.idMeal
+    
+    self.navigationController?.pushViewController(detailVc, animated: true)
   }
 }
 

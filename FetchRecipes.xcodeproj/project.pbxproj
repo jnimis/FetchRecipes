@@ -11,7 +11,6 @@
 		2A668B042874BCD60037D7BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A668B032874BCD60037D7BB /* AppDelegate.swift */; };
 		2A668B062874BCD60037D7BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A668B052874BCD60037D7BB /* SceneDelegate.swift */; };
 		2A668B082874BCD60037D7BB /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A668B072874BCD60037D7BB /* RecipeDetailViewController.swift */; };
-		2A668B0B2874BCD60037D7BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A668B092874BCD60037D7BB /* Main.storyboard */; };
 		2A668B0D2874BCDA0037D7BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A668B0C2874BCDA0037D7BB /* Assets.xcassets */; };
 		2A668B102874BCDA0037D7BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A668B0E2874BCDA0037D7BB /* LaunchScreen.storyboard */; };
 		2A668B1B2874BCDA0037D7BB /* FetchRecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A668B1A2874BCDA0037D7BB /* FetchRecipesTests.swift */; };
@@ -20,10 +19,10 @@
 		2A668B3A2874C1300037D7BB /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A668B392874C1300037D7BB /* RecipeListViewController.swift */; };
 		2A668B3C28752B610037D7BB /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A668B3B28752B610037D7BB /* Meal.swift */; };
 		2A668B412875305C0037D7BB /* RecipeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A668B3F2875305C0037D7BB /* RecipeListTableViewCell.swift */; };
-		2A668B422875305C0037D7BB /* RecipeListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A668B402875305C0037D7BB /* RecipeListTableViewCell.xib */; };
 		2A668B44287536610037D7BB /* HTTPUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A668B43287536610037D7BB /* HTTPUtil.swift */; };
 		2A668B462875E0BA0037D7BB /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A668B452875E0BA0037D7BB /* StringUtil.swift */; };
 		2A668B4828769CAE0037D7BB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2A668B4728769CAE0037D7BB /* README.md */; };
+		2A668B4D28784AA10037D7BB /* ConstraintUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A668B4C28784AA10037D7BB /* ConstraintUtil.swift */; };
 		51F296E2C384BAA8E562C575 /* Pods_FetchRecipes_FetchRecipesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12F3D41029D6C2A267709F16 /* Pods_FetchRecipes_FetchRecipesUITests.framework */; };
 		9B8803FF5679060087FD4F5A /* Pods_FetchRecipesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF27C6067A4042137916B6C9 /* Pods_FetchRecipesTests.framework */; };
 /* End PBXBuildFile section */
@@ -52,7 +51,6 @@
 		2A668B032874BCD60037D7BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A668B052874BCD60037D7BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2A668B072874BCD60037D7BB /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
-		2A668B0A2874BCD60037D7BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A668B0C2874BCDA0037D7BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A668B0F2874BCDA0037D7BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A668B112874BCDA0037D7BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,10 +62,10 @@
 		2A668B392874C1300037D7BB /* RecipeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
 		2A668B3B28752B610037D7BB /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		2A668B3F2875305C0037D7BB /* RecipeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListTableViewCell.swift; sourceTree = "<group>"; };
-		2A668B402875305C0037D7BB /* RecipeListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeListTableViewCell.xib; sourceTree = "<group>"; };
 		2A668B43287536610037D7BB /* HTTPUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPUtil.swift; sourceTree = "<group>"; };
 		2A668B452875E0BA0037D7BB /* StringUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
 		2A668B4728769CAE0037D7BB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2A668B4C28784AA10037D7BB /* ConstraintUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintUtil.swift; sourceTree = "<group>"; };
 		2F2724C68F8171DF7419A9B5 /* Pods-FetchRecipesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FetchRecipesTests.debug.xcconfig"; path = "Target Support Files/Pods-FetchRecipesTests/Pods-FetchRecipesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5943F42170711E1B9890D8C0 /* Pods-FetchRecipes-FetchRecipesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FetchRecipes-FetchRecipesUITests.release.xcconfig"; path = "Target Support Files/Pods-FetchRecipes-FetchRecipesUITests/Pods-FetchRecipes-FetchRecipesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		798DB5DB854088A71BB49FD5 /* Pods-FetchRecipes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FetchRecipes.release.xcconfig"; path = "Target Support Files/Pods-FetchRecipes/Pods-FetchRecipes.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 				2A668B4B287729BA0037D7BB /* Controllers */,
 				2A668B4A287729A00037D7BB /* Model */,
 				2A668B49287729940037D7BB /* Util */,
-				2A668B092874BCD60037D7BB /* Main.storyboard */,
 				2A668B0C2874BCDA0037D7BB /* Assets.xcassets */,
 				2A668B0E2874BCDA0037D7BB /* LaunchScreen.storyboard */,
 				2A668B112874BCDA0037D7BB /* Info.plist */,
@@ -179,6 +176,7 @@
 			children = (
 				2A668B452875E0BA0037D7BB /* StringUtil.swift */,
 				2A668B43287536610037D7BB /* HTTPUtil.swift */,
+				2A668B4C28784AA10037D7BB /* ConstraintUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -196,7 +194,6 @@
 			children = (
 				2A668B392874C1300037D7BB /* RecipeListViewController.swift */,
 				2A668B3F2875305C0037D7BB /* RecipeListTableViewCell.swift */,
-				2A668B402875305C0037D7BB /* RecipeListTableViewCell.xib */,
 				2A668B072874BCD60037D7BB /* RecipeDetailViewController.swift */,
 			);
 			path = Controllers;
@@ -324,8 +321,6 @@
 				2A668B102874BCDA0037D7BB /* LaunchScreen.storyboard in Resources */,
 				2A668B0D2874BCDA0037D7BB /* Assets.xcassets in Resources */,
 				2A668B4828769CAE0037D7BB /* README.md in Resources */,
-				2A668B0B2874BCD60037D7BB /* Main.storyboard in Resources */,
-				2A668B422875305C0037D7BB /* RecipeListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +455,7 @@
 				2A668B062874BCD60037D7BB /* SceneDelegate.swift in Sources */,
 				2A668B412875305C0037D7BB /* RecipeListTableViewCell.swift in Sources */,
 				2A668B44287536610037D7BB /* HTTPUtil.swift in Sources */,
+				2A668B4D28784AA10037D7BB /* ConstraintUtil.swift in Sources */,
 				2A668B462875E0BA0037D7BB /* StringUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,14 +493,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2A668B092874BCD60037D7BB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2A668B0A2874BCD60037D7BB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2A668B0E2874BCDA0037D7BB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -643,7 +631,6 @@
 				INFOPLIST_FILE = FetchRecipes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -672,7 +659,6 @@
 				INFOPLIST_FILE = FetchRecipes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

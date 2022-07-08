@@ -13,12 +13,52 @@ class RecipeDetailViewController: UIViewController {
   var recipe : MealDetail?
   var ingredientsData : [Ingredient] = []
   
-  @IBOutlet var titleLabel: UILabel!
-  @IBOutlet var descriptionLabel: UILabel!
-  @IBOutlet var tableView: UITableView!
+  var backButton : UIButton = {
+    let back = UIButton(type: .roundedRect)
+    back.setTitle("< Back", for: .normal)
+    back.addTarget(RecipeDetailViewController.self, action: #selector(backAction), for: .touchUpInside)
+    return back
+  }()
   
+  var tableView = UITableView(frame: .zero)
+  var titleLabel = UILabel(frame: .zero)
+  var descriptionLabel = UILabel(frame: .zero)
+  var scrollView = UIScrollView()
+
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    view.addSubview(titleLabel)
+    view.addSubview(scrollView)
+    view.addSubview(tableView)
+    view.backgroundColor = .systemBackground
+
+    titleLabel.translatesAutoresizingMaskIntoConstraints = false
+    descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+    scrollView.translatesAutoresizingMaskIntoConstraints = false
+    tableView.translatesAutoresizingMaskIntoConstraints = false
+
+    ConstraintUtil.pinToTop(titleLabel, inView: self.view, padding: 125)
+    ConstraintUtil.pinToLeft(titleLabel, inView: self.view, padding: 8)
+    ConstraintUtil.pinToRight(titleLabel, inView: self.view, padding: 8)
+    titleLabel.font = UIFont.systemFont(ofSize: 28)
+    titleLabel.numberOfLines = 0
+    
+    ConstraintUtil.pinBelow(scrollView, toView: titleLabel, inView: self.view, padding: 24)
+    ConstraintUtil.pinToLeft(scrollView, inView: self.view, padding: 8)
+    ConstraintUtil.pinToRight(scrollView, inView: self.view, padding: 8)
+    ConstraintUtil.constrainHeight(scrollView, to: 200)
+    ConstraintUtil.constrainWidth(scrollView, to: self.view.bounds.size.width)
+    
+    ConstraintUtil.placeView(descriptionLabel, inside: scrollView, padding: 8)
+    
+    descriptionLabel.numberOfLines = 0
+    
+    ConstraintUtil.pinBelow(tableView, toView: scrollView, inView: self.view, padding: 24)
+    ConstraintUtil.pinToBottom(tableView, inView: self.view, padding: 24)
+    ConstraintUtil.pinToLeft(tableView, inView: self.view, padding: 8)
+    ConstraintUtil.pinToRight(tableView, inView: self.view, padding: 8)
+    
     tableView.dataSource = self
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: "IngredientCell")
     
@@ -39,6 +79,8 @@ class RecipeDetailViewController: UIViewController {
       self.ingredientsData = data.ingredients
       self.titleLabel.text = data.strMeal
       self.descriptionLabel.text = data.strInstructions
+      ConstraintUtil.constrainWidth(self.descriptionLabel, to: self.scrollView.bounds.size.width * 0.95)
+
       self.tableView.reloadData()
       // dismiss loading overlay and show error
     }
@@ -60,6 +102,10 @@ class RecipeDetailViewController: UIViewController {
     ingredientsData = []
   }
 
+  @objc func backAction() {
+    self.navigationController?.popViewController(animated: true)
+  }
+  
 }
 
 extension RecipeDetailViewController : UITableViewDataSource {
